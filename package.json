@@ -2,6 +2,5 @@
     "name": "mapbox-outdoors",
     "version": "1.0.0",
     "description": "Outdoors style for Mapbox Studio",
-    "private": true,
     "main": "./package.json"
 }
