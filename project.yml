@@ -44,7 +44,7 @@ layers:
   - contour.label
 maxzoom: 21
 minzoom: 0
-name: MapBox Streets Outdoors Heavy Contours
+name: Mapbox Outdoors
 source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
