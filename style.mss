@@ -170,28 +170,17 @@ Map {
     comp-op: hard-light;
     polygon-clip: false;
     image-filters-inflate: true;
-    [class='full_shadow'] {
-      polygon-fill: #103;
-      polygon-opacity: 0.08;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.075; }
-      [zoom>=17][zoom<=18] { polygon-opacity: 0.05; }
-      [zoom>=18] { polygon-opacity: 0.025; }
+    [class='shadow'] {
+      polygon-fill: #216;
+      polygon-comp-op: multiply;
+      [zoom>=0][zoom<=3] { polygon-opacity: 0.10; }
+      [zoom>=4][zoom<=5] { polygon-opacity: 0.08; }
+      [zoom>=6][zoom<=14] { polygon-opacity: 0.06; }
+      [zoom>=15][zoom<=16] { polygon-opacity: 0.04; }
+      [zoom>=17][zoom<=18] { polygon-opacity: 0.02; }
+      [zoom>=18] { polygon-opacity: 0.01; }
     }
-    [class='medium_shadow'] {
-      polygon-fill: #206;
-      polygon-opacity: 0.08;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.075; }
-      [zoom>=17][zoom<=18] { polygon-opacity: 0.05; }
-      [zoom>=18] { polygon-opacity: 0.025; }
-    }
-    [class='medium_highlight'] {
-      polygon-fill: #ffb;
-      polygon-opacity: 0.2;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.3; }
-      [zoom>=17][zoom<=18] { polygon-opacity: 0.2; }
-      [zoom>=18] { polygon-opacity: 0.1; }
-    }
-    [class='full_highlight'] {
+    [class='highlight'] {
       polygon-fill: #ffd;
       polygon-opacity: 0.25;
       [zoom>=15][zoom<=16] { polygon-opacity: 0.3; }
@@ -211,7 +200,7 @@ Map {
 // unique classes and positions in the stack. This is done by
 // editing the layers list in <project.yml>.
 
-#contour.line::line {
+#contour.line::line[index!=-1] {
   line-color: #000;
   line-opacity: 0.1;
   line-width: 1.2;
@@ -221,7 +210,7 @@ Map {
   }
 }
 
-#contour.label::label[ele!=0] {
+#contour.label::label {
   [zoom<=12][index>=5],
   [zoom>=13][zoom<=15][index=10],
   [zoom>=16][index>=5] {
