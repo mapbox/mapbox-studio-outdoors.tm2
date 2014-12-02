@@ -182,10 +182,10 @@ Map {
     }
     [class='highlight'] {
       polygon-fill: #ffd;
-      polygon-opacity: 0.25;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.3; }
-      [zoom>=17][zoom<=18] { polygon-opacity: 0.2; }
-      [zoom>=18] { polygon-opacity: 0.1; }
+      polygon-opacity: 0.2;
+      [zoom>=15][zoom<=16] { polygon-opacity: 0.15; }
+      [zoom>=17][zoom<=18] { polygon-opacity: 0.10; }
+      [zoom>=18] { polygon-opacity: 0.05; }
     }
   }
   ::1 { image-filters: agg-stack-blur(2,2); }
