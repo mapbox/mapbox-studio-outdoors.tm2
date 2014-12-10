@@ -9,8 +9,8 @@
   <Parameter name="format">png8:m=h:c=128</Parameter>
   <Parameter name="maxzoom">21</Parameter>
   <Parameter name="minzoom">0</Parameter>
-  <Parameter name="name"><![CDATA[MapBox Streets Outdoors Heavy Contours]]></Parameter>
-  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5]]></Parameter>
+  <Parameter name="name"><![CDATA[Mapbox Outdoors]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v5]]></Parameter>
 </Parameters>
 
 <FontSet name="fontset-0">
@@ -64,22 +64,6 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <Filter>([class] = 'grass')</Filter>
-    <PolygonSymbolizer fill-opacity="0.2" fill="#e7ebd1" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([class] = 'grass')</Filter>
-    <PolygonSymbolizer fill-opacity="0.4" fill="#e7ebd1" />
-  </Rule>
-  <Rule>
-    <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'grass')</Filter>
-    <PolygonSymbolizer fill="#e7ebd1" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
     <Filter>([class] = 'scrub')</Filter>
     <PolygonSymbolizer fill-opacity="0.2" fill="#e0e8cd" />
   </Rule>
@@ -99,6 +83,22 @@
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([class] = 'scrub')</Filter>
     <PolygonSymbolizer fill="#e0e8cd" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill-opacity="0.2" fill="#e7ebd1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill-opacity="0.4" fill="#e7ebd1" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'grass')</Filter>
+    <PolygonSymbolizer fill="#e7ebd1" />
   </Rule>
   <Rule>
     <Filter>([class] = 'snow')</Filter>
@@ -232,12 +232,12 @@
 <Style name="landuse-cover" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
     <PolygonSymbolizer fill="#dddddd" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
     <PolygonSymbolizer fill="#dddddd" />
   </Rule>
   <Rule>
@@ -247,12 +247,12 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([type] = 'rough')</Filter>
+    <Filter>([type] = 'golf_course')</Filter>
     <PolygonSymbolizer fill="#d1f0ba" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([type] = 'golf_course')</Filter>
+    <Filter>([type] = 'rough')</Filter>
     <PolygonSymbolizer fill="#d1f0ba" />
   </Rule>
   <Rule>
@@ -285,25 +285,25 @@
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
     <PolygonSymbolizer fill="#dddddd" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
+    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
     <PolygonSymbolizer fill="#d1f0ba" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
     <PolygonSymbolizer fill="#dddddd" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
+    <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
     <PolygonSymbolizer fill="#d1f0ba" />
   </Rule>
   <Rule>
@@ -315,13 +315,13 @@
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'golf_course')</Filter>
+    <Filter>([type] = 'rough')</Filter>
     <PolygonSymbolizer fill="#d1f0ba" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'rough')</Filter>
+    <Filter>([type] = 'golf_course')</Filter>
     <PolygonSymbolizer fill="#d1f0ba" />
   </Rule>
   <Rule>
@@ -442,6 +442,7 @@
     <LineSymbolizer stroke-opacity="0.2" stroke-width="1.2" stroke="#000000" />
   </Rule>
   <Rule>
+    <Filter>([index] != -1)</Filter>
     <LineSymbolizer stroke="#000000" stroke-opacity="0.1" stroke-width="1.2" />
   </Rule>
 </Style>
@@ -453,26 +454,14 @@
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([class] = 'full_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.3" fill="#ffffdd" clip="false" />
+    <Filter>([class] = 'highlight')</Filter>
+    <PolygonSymbolizer fill-opacity="0.15" fill="#ffffdd" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([class] = 'medium_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.3" fill="#ffffbb" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([class] = 'medium_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.075" fill="#220066" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([class] = 'full_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.075" fill="#110033" clip="false" />
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.04" fill="#221166" comp-op="multiply" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -484,26 +473,14 @@
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'full_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.2" fill="#ffffdd" clip="false" />
+    <Filter>([class] = 'highlight')</Filter>
+    <PolygonSymbolizer fill-opacity="0.1" fill="#ffffdd" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'medium_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.2" fill="#ffffbb" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'medium_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.05" fill="#220066" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'full_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.05" fill="#110033" clip="false" />
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.02" fill="#221166" comp-op="multiply" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
@@ -514,23 +491,13 @@
 <Style name="hillshade-4" filter-mode="first" image-filters="agg-stack-blur(32,32)" image-filters-inflate="true" comp-op="hard-light">
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([class] = 'full_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.1" fill="#ffffdd" clip="false" />
+    <Filter>([class] = 'highlight')</Filter>
+    <PolygonSymbolizer fill-opacity="0.05" fill="#ffffdd" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([class] = 'medium_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.1" fill="#ffffbb" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([class] = 'medium_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.025" fill="#220066" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([class] = 'full_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.025" fill="#110033" clip="false" />
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.01" fill="#221166" comp-op="multiply" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
@@ -541,26 +508,14 @@
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'full_highlight')</Filter>
-    <PolygonSymbolizer fill="#ffffdd" fill-opacity="0.25" clip="false" />
+    <Filter>([class] = 'highlight')</Filter>
+    <PolygonSymbolizer fill="#ffffdd" fill-opacity="0.2" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'medium_highlight')</Filter>
-    <PolygonSymbolizer fill="#ffffbb" fill-opacity="0.2" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'medium_shadow')</Filter>
-    <PolygonSymbolizer fill="#220066" fill-opacity="0.08" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'full_shadow')</Filter>
-    <PolygonSymbolizer fill="#110033" fill-opacity="0.08" clip="false" />
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.06" fill="#221166" comp-op="multiply" clip="false" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -571,23 +526,25 @@
 <Style name="hillshade-0" filter-mode="first" image-filters-inflate="true" comp-op="hard-light">
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([class] = 'full_highlight')</Filter>
-    <PolygonSymbolizer fill="#ffffdd" fill-opacity="0.25" clip="false" />
+    <Filter>([class] = 'highlight')</Filter>
+    <PolygonSymbolizer fill="#ffffdd" fill-opacity="0.2" clip="false" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([class] = 'medium_highlight')</Filter>
-    <PolygonSymbolizer fill="#ffffbb" fill-opacity="0.2" clip="false" />
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.06" fill="#221166" comp-op="multiply" clip="false" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([class] = 'medium_shadow')</Filter>
-    <PolygonSymbolizer fill="#220066" fill-opacity="0.08" clip="false" />
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.08" fill="#221166" comp-op="multiply" clip="false" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([class] = 'full_shadow')</Filter>
-    <PolygonSymbolizer fill="#110033" fill-opacity="0.08" clip="false" />
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([class] = 'shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.1" fill="#221166" comp-op="multiply" clip="false" />
   </Rule>
   <Rule>
     <MinScaleDenominator>50000</MinScaleDenominator>
@@ -627,46 +584,46 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-width="3" stroke-linecap="round" smooth="0.5" stroke="#84a8af" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-width="2" stroke-linecap="round" smooth="0.5" stroke="#84a8af" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-width="1" stroke="#84a8af" />
   </Rule>
   <Rule>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke="#84a8af" stroke-width="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-width="3" stroke-linecap="round" smooth="0.5" stroke="#84a8af" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-width="2" stroke-linecap="round" smooth="0.5" stroke="#84a8af" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-width="1" stroke="#84a8af" />
   </Rule>
   <Rule>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke="#84a8af" stroke-width="0.5" />
   </Rule>
 </Style>
@@ -986,11 +943,11 @@
     <PolygonSymbolizer fill="rgba(204, 221, 221, 0.19999999999999996)" clip="false" />
   </Rule>
   <Rule>
-    <Filter>([class] = 'pier')</Filter>
+    <Filter>([class] = 'breakwater')</Filter>
     <PolygonSymbolizer fill="#f4efe1" clip="false" />
   </Rule>
   <Rule>
-    <Filter>([class] = 'breakwater')</Filter>
+    <Filter>([class] = 'pier')</Filter>
     <PolygonSymbolizer fill="#f4efe1" clip="false" />
   </Rule>
   <Rule>
@@ -6425,27 +6382,27 @@
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([ele] != 0) and ([index] = 10)</Filter>
+    <Filter>([index] = 10)</Filter>
     <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([ele] != 0) and ([index] = 10)</Filter>
+    <Filter>([index] = 10)</Filter>
     <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([ele] != 0) and ([index] = 10)</Filter>
+    <Filter>([index] = 10)</Filter>
     <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([ele] != 0) and ([index] &gt;= 5)</Filter>
+    <Filter>([index] &gt;= 5)</Filter>
     <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([ele] != 0) and ([index] &gt;= 5)</Filter>
+    <Filter>([index] &gt;= 5)</Filter>
     <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#666666" avoid-edges="true" halo-fill="rgba(238, 238, 212, 0.19999999999999996)" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
 </Style>

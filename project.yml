@@ -45,7 +45,7 @@ layers:
 maxzoom: 21
 minzoom: 0
 name: Mapbox Outdoors
-source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - road.mss
