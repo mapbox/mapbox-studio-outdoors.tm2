@@ -1,6 +1,6 @@
 {
     "name": "mapbox-studio-mapbox-outdoors",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Outdoors style for Mapbox Studio",
     "main": "./package.json"
 }
