@@ -5,9 +5,9 @@
 // Airports and rail stations are styled separately from other POIs
 // because we use different fields to set their icon images.
 
-#poi_label[type!='Aerodrome'][type!='Rail Station'][type!='hole'] {
+#poi_label[type!='Aerodrome'][type!='Rail Station'][type!='hole'][zoom>=7] {
   ::icon {
-    [zoom<14],
+    [zoom<14][localrank<=1],
     [zoom>=14][scalerank=1][localrank<=1],
     [zoom>=15][scalerank<=2][localrank<=1],
     [zoom>=16][scalerank<=3][localrank<=1],
@@ -26,7 +26,7 @@
       }
     }
   }
-  [zoom<14],
+  [zoom<14][localrank<=1],
   [zoom>=14][scalerank=1][localrank<=1],
   [zoom>=15][scalerank<=2][localrank<=1],
   [zoom>=16][scalerank<=3][localrank<=1],

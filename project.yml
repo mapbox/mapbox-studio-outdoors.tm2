@@ -31,7 +31,6 @@ layers:
   - road
   - bridge
   - admin
-  - country_label_line
   - country_label
   - marine_label
   - state_label
@@ -45,7 +44,7 @@ layers:
 maxzoom: 21
 minzoom: 0
 name: Mapbox Outdoors
-source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v5"
+source: "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v6"
 styles: 
   - style.mss
   - road.mss
