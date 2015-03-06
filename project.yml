@@ -16,31 +16,7 @@ center:
 description: ''
 format: "png8:m=h:c=128"
 interactivity_layer: ''
-layers: 
-  - landcover
-  - landuse
-  - contour.line
-  - hillshade
-  - waterway
-  - water
-  - aeroway
-  - barrier_line
-  - building
-  - landuse_overlay
-  - tunnel
-  - road
-  - bridge
-  - admin
-  - country_label
-  - marine_label
-  - state_label
-  - place_label
-  - water_label
-  - poi_label
-  - road_label
-  - waterway_label
-  - housenum_label
-  - contour.label
+layers: null
 maxzoom: 21
 minzoom: 0
 name: Mapbox Outdoors

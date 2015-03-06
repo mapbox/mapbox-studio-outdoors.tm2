@@ -200,7 +200,7 @@ Map {
 // unique classes and positions in the stack. This is done by
 // editing the layers list in <project.yml>.
 
-#contour.line::line[index!=-1] {
+#contour::line[index!=-1] {
   line-color: #000;
   line-opacity: 0.1;
   line-width: 1.2;
@@ -210,7 +210,7 @@ Map {
   }
 }
 
-#contour.label::label {
+#contour::label {
   [zoom<=12][index>=5],
   [zoom>=13][zoom<=15][index=10],
   [zoom>=16][index>=5] {
