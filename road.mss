@@ -150,7 +150,7 @@
       [zoom>=18] { line-width: 4; }
     }
   }
-  [class='path'][type!='steps'] {
+  [class='path'][type=~'^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'] {
     #bridge::mask[zoom>=16] {
       line-color: #8f8880;
       line-width: 6;

@@ -997,155 +997,291 @@
 <Style name="tunnel-path" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#8877bb" stroke-dasharray="4, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1" stroke="#8877bb" stroke-dasharray="4, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#8877bb" stroke-dasharray="4, 2" stroke-width="0.8" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#8877bb" stroke-dasharray="4, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#8877bb" stroke-dasharray="4, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke="#8877bb" stroke-dasharray="4, 2" stroke-width="0.8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-width="1.2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-linejoin="round" stroke-width="1" />
   </Rule>
 </Style>
@@ -1644,70 +1780,138 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ccccee" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ccccee" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#ccccee" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
+    <LineSymbolizer stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
@@ -1733,155 +1937,291 @@
 <Style name="road-path" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#8877bb" stroke-dasharray="4, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1" stroke="#8877bb" stroke-dasharray="4, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#8877bb" stroke-dasharray="4, 2" stroke-width="0.8" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#8877bb" stroke-dasharray="4, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#8877bb" stroke-dasharray="4, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke="#8877bb" stroke-dasharray="4, 2" stroke-width="0.8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-width="1.2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-linejoin="round" stroke-width="1" />
   </Rule>
 </Style>
@@ -2380,70 +2720,138 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ccccee" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ccccee" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#ccccee" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#ccee99" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
     <LineSymbolizer stroke-width="4" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
     <LineSymbolizer stroke-width="3" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
+    <LineSymbolizer stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke="#ffffdd" stroke-opacity="0.5" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
@@ -2543,155 +2951,291 @@
 <Style name="bridge-path" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#8877bb" stroke-dasharray="4, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1" stroke="#8877bb" stroke-dasharray="4, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#8877bb" stroke-dasharray="4, 2" stroke-width="0.8" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#8877bb" stroke-dasharray="4, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#8877bb" stroke-dasharray="4, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke="#8877bb" stroke-dasharray="4, 2" stroke-width="0.8" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 3" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'other')</Filter>
+    <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 3" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#448888" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke="#448888" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#448888" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#448888" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#cc9977" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'trail')</Filter>
+    <LineSymbolizer stroke="#cc9977" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#cc9977" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'hiking')</Filter>
+    <LineSymbolizer stroke="#cc9977" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#998877" stroke-dasharray="6, 2" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'path')</Filter>
+    <LineSymbolizer stroke="#998877" stroke-dasharray="6, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 1" stroke-linejoin="round" stroke-width="1" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke-width="1.2" stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#bbbbaa" stroke-dasharray="2, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-width="1.2" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-linejoin="round" stroke-width="1" />
   </Rule>
 </Style>
@@ -2950,70 +3494,138 @@
 <Style name="bridge-case" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ccccee" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ccccee" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke="#ccccee" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'piste')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke="#ccccee" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ccee99" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ccee99" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke="#ccee99" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'mtb')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ccee99" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ccee99" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke-opacity="1" stroke="#ccee99" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke="#ccee99" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ffffdd" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
     <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ffffdd" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps') and ([mapnik::geometry_type] = 2)</Filter>
+    <Filter>([class] = 'path') and ([mapnik::geometry_type] = 2) and ([type] = 'steps')</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke="#ffffdd" stroke-linejoin="round" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="4" stroke="#ffffdd" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-opacity="1" stroke-width="3" stroke="#ffffdd" stroke-linejoin="round" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$')) and ([mapnik::geometry_type] = 2)</Filter>
     <LineSymbolizer stroke-opacity="1" stroke="#ffffdd" stroke-linejoin="round" stroke-width="2" />
   </Rule>
   <Rule>
@@ -3334,7 +3946,7 @@
 <Style name="bridge-mask" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([class] = 'path') and ([type] != 'steps')</Filter>
+    <Filter>([class] = 'path') and ([type].match('^(footway|path|hiking|trail|cycleway|mtb|piste|other)$'))</Filter>
     <LineSymbolizer stroke="#8f8880" stroke-width="6" />
   </Rule>
 </Style>
